@@ -20,9 +20,13 @@ namespace ConsoleApplication1
             XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "log4net.config"));
             //SelectYUNHO();
             //SelectGRADE();
-            
-            InsertINFO();
-            SelectINFO();
+
+            //InsertINFO();
+            //InsertTable();
+            //SelectTable();
+            //SelectINFO();
+            InsertSTUDENTS();
+            SelectSTUDENTS();
             Console.Read();
         }
 
@@ -51,7 +55,7 @@ namespace ConsoleApplication1
             return str;
         }
 
-        public static void SelectYUNHO()
+        public static void SelectTable()
         {
             ISqlMapper mapper = EntityMapper;
             MyClass1 testVo = new MyClass1();
@@ -59,10 +63,7 @@ namespace ConsoleApplication1
 
             for (int x = 0; x < resultList.Count; x++)
             {
-                Console.WriteLine(resultList[x].C1);
-                Console.WriteLine(resultList[x].C2);
-                Console.WriteLine(resultList[x].C3);
-                Console.WriteLine(resultList[x].C4);
+                Console.WriteLine("{0},{1},{2},{3},{4}", resultList[x].C1, resultList[x].C2, resultList[x].C3, resultList[x].C4, resultList[x].C5);
             }
 
         }
@@ -101,5 +102,31 @@ namespace ConsoleApplication1
             MyClass2 testVo = new MyClass2() {C_NAME = "JAMES", C_AGE ="100",C_PHONE ="010-0987-0123",C_SOCIAL_NUMBER = "001231-4567894" };
             mapper.Insert("InsertINFO", testVo);
         }
+
+        public static void InsertTable()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass1 testVo = new MyClass1() { C1 = "JAMES", C2 = "ASD", C3 = "ARS", C4 = "BBQ" };
+            mapper.Insert("InsertTable", testVo);
+        }
+
+        public static void SelectSTUDENTS()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass3 testVo = new MyClass3();
+            IList<MyClass3> resultList = mapper.QueryForList<MyClass3>("SelectSTUDENTS", testVo);
+
+            for (int x = 0; x < resultList.Count; x++)
+            {
+                Console.WriteLine(resultList[x].C_KOR_NAME + resultList[x].C_ENG_NAME + resultList[x].C_AGE);
+            }
+        }
+        public static void InsertSTUDENTS()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass3 testVo = new MyClass3() { C_KOR_NAME = "윤호", C_ENG_NAME = "YUNHO", C_AGE = 30 };
+            mapper.Insert("InsertSTUDENTS", testVo);
+        }
+
     }
 }

@@ -13,8 +13,24 @@
            , C2
            , C3
            , C4
+           , '60' AS C5 
       FROM YUNHO;
     </statement>
+    <statement id="InsertTable" parameterClass="ConsoleApplication1.MyClass1" >
+      INSERT INTO YUNHO
+      ( C1
+      , C2
+      , C3
+      , C4
+      )
+      VALUES
+      ( #C1#
+      , #C2#
+      , #C3#
+      , #C4#
+      )
+    </statement>
+
     <statement id="SelectGRADE" parameterClass="ConsoleApplication1.Class.MyClass1" resultClass="ConsoleApplication1.Class.MyClass1" >
       SELECT C_NAME
       , C_KOREAN
@@ -23,6 +39,29 @@
       , C_SCIENCE
       FROM TB_GRADE;
     </statement>
+    <statement id="InsertGRADE" parameterClass="ConsoleApplication1.MyClass1" >
+      INSERT INTO YUNHO
+      ( C1
+      , C2
+      , C3
+      , C4
+      )
+      VALUES
+      ( #C1#
+      , #C2#
+      , #C3#
+      , #C4#
+      )
+    </statement>
+
+    <statement id="SelectSTUDENTS" parameterClass="ConsoleApplication1.Class.MyClass3" resultClass="ConsoleApplication1.Class.MyClass3" >
+      SELECT
+      C_KOR_NAME
+      , C_ENG_NAME
+      , C_AGE
+      FROM TB_STUDENTS;
+    </statement>
+
     <statement id="SelectINFO" parameterClass="ConsoleApplication1.Class.MyClass2" resultClass="ConsoleApplication1.Class.MyClass2" >
       SELECT C_NAME
       , C_AGE
@@ -44,6 +83,21 @@
       , #C_AGE#
       , #C_PHONE#
       , #C_SOCIAL_NUMBER#
+      );
+    </statement>
+    
+    <statement id="InsertSTUDENTS" parameterClass="ConsoleApplication1.Class.MyClass3"  >
+      INSERT INTO TB_STUDENTS
+      (
+      C_KOR_NAME
+      ,C_ENG_NAME
+      ,C_AGE
+      )
+      VALUES
+      (
+      #C_KOR_NAME#
+      , #C_ENG_NAME#
+      , #C_AGE#
       );
     </statement>
   </statements>
