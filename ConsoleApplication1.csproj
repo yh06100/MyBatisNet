@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\MyClass1.cs" />
+    <Compile Include="Class\MyClass2.cs" />
     <Compile Include="MyClass1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Query\CreateTable.txt" />
+    <Content Include="Query\SQLQuery3.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

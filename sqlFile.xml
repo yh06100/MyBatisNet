@@ -23,5 +23,28 @@
       , C_SCIENCE
       FROM TB_GRADE;
     </statement>
+    <statement id="SelectINFO" parameterClass="ConsoleApplication1.Class.MyClass2" resultClass="ConsoleApplication1.Class.MyClass2" >
+      SELECT C_NAME
+      , C_AGE
+      , C_PHONE
+      , C_SOCIAL_NUMBER
+      FROM TB_PEOPLE_INFO;
+    </statement>
+    <statement id="InsertINFO" parameterClass="ConsoleApplication1.Class.MyClass2"  >
+      INSERT INTO TB_PEOPLE_INFO
+      (
+      C_NAME
+      ,C_AGE
+      ,C_PHONE
+      ,C_SOCIAL_NUMBER
+      )
+      VALUES
+      (
+      #C_NAME#
+      , #C_AGE#
+      , #C_PHONE#
+      , #C_SOCIAL_NUMBER#
+      );
+    </statement>
   </statements>
 </sqlMap>
