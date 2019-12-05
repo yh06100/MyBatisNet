@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TestApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <statements>
+    <statement id="FindPageId" parameterClass="System.String" resultClass="System.String" >
+      SELECT TOP(1) C1
+      FROM YUNHO;
+    </statement>
+    <statement id="SelectTable" parameterClass="ConsoleApplication1.MyClass1" resultClass="ConsoleApplication1.MyClass1" >
+      <!--SELECT TOP(1) C1, C2, C3, C4
+      FROM YUNHO;-->
+      SELECT C1
+           , C2
+           , C3
+           , C4
+      FROM YUNHO;
+    </statement>
+    <statement id="SelectGRADE" parameterClass="ConsoleApplication1.Class.MyClass1" resultClass="ConsoleApplication1.Class.MyClass1" >
+      SELECT C_NAME
+      , C_KOREAN
+      , C_ENGLISH
+      , C_MATH
+      , C_SCIENCE
+      FROM TB_GRADE;
+    </statement>
+  </statements>
+</sqlMap>

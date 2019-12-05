@@ -1,0 +1,48 @@
+﻿CREATE TABLE YUNHO(
+C1 NVARCHAR(40)
+,C2 NVARCHAR(40) 
+,C3  NVARCHAR(40) 
+,C4  NVARCHAR(40) 
+ )
+
+
+  INSERT INTO YUNHO
+ (
+  C1
+  ,C2
+  ,C3
+  ,C4
+ )
+ VALUES
+(
+'aaa1'
+,'bbb1'
+,'ccc1'
+,'ddd1'
+);
+
+
+CREATE TABLE TB_GRADE(
+C_NAME NVARCHAR(40)
+,C_KOREAN NVARCHAR(40) 
+,C_ENGLISH  NVARCHAR(40) 
+,C_MATH  NVARCHAR(40) 
+,C_SCIENCE  NVARCHAR(40) 
+ )
+
+    INSERT INTO TB_GRADE
+   (
+   C_NAME
+   , C_KOREAN
+   , C_ENGLISH
+   , C_MATH
+   , C_SCIENCE
+   )
+ VALUES
+(
+'JAM'
+,'100'
+,'30'
+,'90'
+,'1'
+);
