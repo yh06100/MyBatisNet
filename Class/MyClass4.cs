@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApplication1.Class
 {
-    class MyClass4
+    public class MyClass4
     {
         public string NUMBER { get; set; }
         public string NAME { get; set; }

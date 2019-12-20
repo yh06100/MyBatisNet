@@ -28,9 +28,9 @@ namespace ConsoleApplication1
             //InsertSTUDENTS();
             //SelectSTUDENTS();
 
-            InsertSTUDENT();
+            //InsertSTUDENT();
             SelectSTUDENT();
-            InsertSCORE();
+            //InsertSCORE();
             SelectSCORE();
 
             Console.Read();
@@ -148,7 +148,7 @@ namespace ConsoleApplication1
         public static void InsertSTUDENT()
         {
             ISqlMapper mapper = EntityMapper;
-            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019423", NAME = "OHYUNHO", AGE = "27", SEX = "MAN" };
+            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019424", NAME = "OHYUNHO", AGE = "27", SEX = "MAN" };
             mapper.Insert("InsertSTUDENT", testVo);
         }
         public static void SelectSCORE()
@@ -166,7 +166,7 @@ namespace ConsoleApplication1
         public static void InsertSCORE()
         {
             ISqlMapper mapper = EntityMapper;
-            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019423", KOREAN = "10", ENGLISH = "20", MATH = "30" 
+            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019424", KOREAN = "10", ENGLISH = "20", MATH = "30" 
             , SOCIAL = "40", SCIENCE = "50"};
             mapper.Insert("InsertSCORE", testVo);
         }
