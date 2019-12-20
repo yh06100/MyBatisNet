@@ -25,8 +25,14 @@ namespace ConsoleApplication1
             //InsertTable();
             //SelectTable();
             //SelectINFO();
-            InsertSTUDENTS();
-            SelectSTUDENTS();
+            //InsertSTUDENTS();
+            //SelectSTUDENTS();
+
+            InsertSTUDENT();
+            SelectSTUDENT();
+            InsertSCORE();
+            SelectSCORE();
+
             Console.Read();
         }
 
@@ -126,6 +132,43 @@ namespace ConsoleApplication1
             ISqlMapper mapper = EntityMapper;
             MyClass3 testVo = new MyClass3() { C_KOR_NAME = "윤호", C_ENG_NAME = "YUNHO", C_AGE = 30 };
             mapper.Insert("InsertSTUDENTS", testVo);
+        }
+
+        public static void SelectSTUDENT()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass4 testVo = new MyClass4();
+            IList<MyClass4> resultList = mapper.QueryForList<MyClass4>("SelectSTUDENT", testVo);
+
+            for (int x = 0; x < resultList.Count; x++)
+            {
+                Console.WriteLine(resultList[x].NUMBER + resultList[x].NAME + resultList[x].AGE + resultList[x].SEX);
+            }
+        }
+        public static void InsertSTUDENT()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019423", NAME = "OHYUNHO", AGE = "27", SEX = "MAN" };
+            mapper.Insert("InsertSTUDENT", testVo);
+        }
+        public static void SelectSCORE()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass4 testVo = new MyClass4();
+            IList<MyClass4> resultList = mapper.QueryForList<MyClass4>("SelectSCORE", testVo);
+
+            for (int x = 0; x < resultList.Count; x++)
+            {
+                Console.WriteLine(resultList[x].NUMBER + resultList[x].KOREAN + resultList[x].ENGLISH + resultList[x].MATH
+                    + resultList[x].SOCIAL + resultList[x].SCIENCE);
+            }
+        }
+        public static void InsertSCORE()
+        {
+            ISqlMapper mapper = EntityMapper;
+            MyClass4 testVo = new MyClass4() { NUMBER = "13-71019423", KOREAN = "10", ENGLISH = "20", MATH = "30" 
+            , SOCIAL = "40", SCIENCE = "50"};
+            mapper.Insert("InsertSCORE", testVo);
         }
 
     }

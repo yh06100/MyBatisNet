@@ -100,5 +100,60 @@
       , #C_AGE#
       );
     </statement>
+
+    <statement id="InsertSTUDENT" parameterClass="ConsoleApplication1.Class.MyClass4"  >
+      INSERT INTO STUDENT
+      (
+      NUMBER
+      ,NAME
+      ,AGE
+      ,SEX
+      )
+      VALUES
+      (
+      #NUMBER#
+      , #NAME#
+      , #AGE#
+      , #SEX#
+      );
+    </statement>
+    <statement id="SelectSTUDENT" parameterClass="ConsoleApplication1.Class.MyClass4" resultClass="ConsoleApplication1.Class.MyClass4" >
+      SELECT
+      NUMBER
+      , NAME
+      , AGE
+      , SEX
+      FROM STUDENT;
+    </statement>
+    <statement id="InsertSCORE" parameterClass="ConsoleApplication1.Class.MyClass4"  >
+      INSERT INTO SCORE
+      (
+      NUMBER
+      ,KOREAN
+      ,ENGLISH
+      , MATH
+      , SOCIAL
+      , SCIENCE
+      )
+      VALUES
+      (
+      #NUMBER#
+      , #KOREAN#
+      , #ENGLISH#
+      , #MATH#
+      , #SOCIAL#
+      , #SCIENCE#
+      );
+    </statement>
+    <statement id="SelectSCORE" parameterClass="ConsoleApplication1.Class.MyClass4" resultClass="ConsoleApplication1.Class.MyClass4" >
+      SELECT
+      NUMBER
+      , KOREAN
+      , ENGLISH
+      , MATH
+      , SOCIAL
+      , SCIENCE
+      FROM SCORE;
+    </statement>
   </statements>
 </sqlMap>

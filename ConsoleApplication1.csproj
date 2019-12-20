@@ -69,6 +69,7 @@
     <Compile Include="Class\MyClass1.cs" />
     <Compile Include="Class\MyClass2.cs" />
     <Compile Include="Class\MyClass3.cs" />
+    <Compile Include="Class\MyClass4.cs" />
     <Compile Include="MyClass1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
